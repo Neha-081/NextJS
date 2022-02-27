@@ -1,13 +1,13 @@
 import { withRouter } from "next/router"
 import { useRouter } from "next/router"
-const AboutPage=(props)=>{
+const ContactPage=(props)=>{
     const router=useRouter()
     return (
         <div>
-    <p>About Page</p>
+    <p>Contact Page</p>
     <button onClick={()=>props.router.push("/")}>Go To Home</button>
     </div>
     )
 }
 
-export default withRouter(AboutPage)
+export default withRouter(ContactPage)
