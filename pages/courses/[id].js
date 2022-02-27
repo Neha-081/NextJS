@@ -1,9 +1,16 @@
 import { withRouter } from "next/router"
 
 const fullStack=(props)=>{
-    console.log(props);
+   const coursesMap={
+       'Webdev':"Full Stack",
+       'Android':"Android development"
+   }
+   if(typeof window==='undefined'){
+       return <p>...Loading</p>
+   }
+
    return (<div>
-<p>full Stack </p>
+<p>{coursesMap[props.router.query.id]} Course </p>
     </div>)
 }
 
