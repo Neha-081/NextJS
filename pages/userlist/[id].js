@@ -1,6 +1,8 @@
 import { withRouter } from "next/router"
+import { useRouter } from "next/router"
 
 const usersDetail=(props)=>{
+    var router=useRouter()
    const usersMap={
        "1":"Neha",
        "2":"Maya",
@@ -13,7 +15,9 @@ const usersDetail=(props)=>{
    }
 
    return (<div>
-<p>Name :- {usersMap[props.router.query.id]} </p>
+<p className="name">Name :- {usersMap[props.router.query.id]} </p>
+<button onClick={()=>props.router.push("/")} className="homebtn">Go To Home</button>
+<button onClick={()=>props.router.push("/usersList")} className="homebtn">Go To UserList Page</button>
     </div>)
 }
 

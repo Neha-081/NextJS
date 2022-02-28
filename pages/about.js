@@ -4,8 +4,8 @@ const AboutPage=(props)=>{
     const router=useRouter()
     return (
         <div>
-    <p>About Page</p>
-    <button onClick={()=>props.router.push("/")}>Go To Home</button>
+    <h1 className="title">Welcome to About Page</h1>
+    <button onClick={()=>props.router.push("/")} className="homebtn">Go To Home</button>
     </div>
     )
 }

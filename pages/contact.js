@@ -4,8 +4,8 @@ const ContactPage=(props)=>{
     const router=useRouter()
     return (
         <div>
-    <p>Contact Page</p>
-    <button onClick={()=>props.router.push("/")}>Go To Home</button>
+    <h1 className="title">Welcome to Contact Page</h1>
+    <button onClick={()=>props.router.push("/")} className="homebtn">Go To Home</button>
     </div>
     )
 }

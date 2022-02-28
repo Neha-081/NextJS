@@ -1,13 +1,17 @@
 import Link from "next/link"
+
 const HomePage=()=>
 (
     <div>
-<p>Home Page</p>
-<Link href="/about">Go to About Page</Link>
+<h1 className="title">Welcome to Home Page</h1>
+
+<div className="btndiv">
+<Link href="/contact"><button className="contactbtn">Go to Contact Page</button></Link>
 <br/>
-<Link href="/contact">Go to Contact Page</Link>
+<Link href="/about"><button className="aboutbtn">Go to About Page</button></Link>
 <br/>
-<Link href="/usersList">Go to Users List</Link>
+<Link href="/usersList"><button className="usersbtn">Go to Users List Page</button></Link>
+</div>
 </div>
 )
 export default HomePage

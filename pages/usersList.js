@@ -1,16 +1,19 @@
 import Link from "next/link";
+import { withRouter } from "next/router"
+import { useRouter } from "next/router"
 
 
 const UserMainPage=(props)=>{
+    const router=useRouter()
     console.log(props);
     return (
     <div>
-<h1>Users</h1>
-{props.users.map((user)=><li key={user}>
-    <Link href={`/userlist/${user}`}>{user}</Link>
+<h1 className="title">Welcome to Users List Page</h1>
+{props.users.map((user)=><li key={user} >
+    <Link href={`/userlist/${user}`} ><span className="id">ID No :- {user}</span></Link>
     
     </li>)}
-
+    <button onClick={()=>props.router.push("/")} className="homebtn">Go To Home</button>
     </div>
     )
     }
@@ -24,4 +27,4 @@ export const getStaticProps=async()=>{
     }
 }
 
-export default UserMainPage
+export default withRouter(UserMainPage)
