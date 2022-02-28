@@ -15,6 +15,7 @@ const usersDetail=(props)=>{
    }
 
    return (<div>
+       <p className="name">ID No :- {props.router.query.id} </p>
 <p className="name">Name :- {usersMap[props.router.query.id]} </p>
 <button onClick={()=>props.router.push("/")} className="homebtn">Go To Home</button>
 <button onClick={()=>props.router.push("/usersList")} className="homebtn">Go To UserList Page</button>
